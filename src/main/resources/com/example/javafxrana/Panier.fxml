@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.validation.RequiredFieldValidator?>
+<?import com.jfoenix.validation.RegexValidator?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.javafxrana.PanierController"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <Pane layoutY="-14.0" prefHeight="592.0" prefWidth="813.0">
+            <children>
+                <TableView fx:id="cartTableView" layoutX="20.0" layoutY="20.0" prefHeight="300.0" prefWidth="600.0">
+                    <columns>
+                        <TableColumn text="ID" prefWidth="100">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="ref_produit" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="Name" prefWidth="150">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="nom" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="Quantity" prefWidth="100">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="qte" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="Price" prefWidth="100">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="prix" />
+                            </cellValueFactory>
+                        </TableColumn>
+
+
+
+
+
+                    </columns>
+                </TableView>
+<!--                <JFXTextField fx:id="qtePanier" labelFloat="true" layoutX="208.0" layoutY="246.0" prefHeight="25.0" prefWidth="308.0" promptText="Quantity" >-->
+<!--                    <validators>-->
+<!--                        <RequiredFieldValidator message="Quantity Field Required">-->
+<!--                            &lt;!&ndash; You can add an icon or other customization here &ndash;&gt;-->
+<!--                        </RequiredFieldValidator>-->
+<!--                        <RegexValidator message="Please Enter a Valid Quantity" regexPattern="^[1-9]\d*$"/>-->
+<!--                    </validators>-->
+<!--                </JFXTextField>-->
+<!--                <TextField fx:id="qtePanier"  layoutX="208.0" layoutY="246.0" prefHeight="25.0" prefWidth="308.0" promptText="Quantity"></TextField>-->
+
+
+
+                <JFXButton fx:id="add" buttonType="RAISED" layoutX="269.0" layoutY="500.0" onAction="#AddPanier" prefHeight="33.0" prefWidth="115.0" stylesheets="@assests/style/css.css" text="Enregistrer" textFill="#0c8318">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton fx:id="Remove" buttonType="RAISED" layoutX="401.0" layoutY="500.0" onAction="#removeItem" prefHeight="33.0" prefWidth="115.0" stylesheets="@assests/style/css.css" text="Remove" textFill="#f70000bb">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </JFXButton>
+<!--                <JFXButton fx:id="retour" buttonType="RAISED" layoutX="24.0" layoutY="38.0" onAction="#Retour" prefHeight="31.0" prefWidth="115.0" stylesheets="@assests/style/css.css" text="Retour" textFill="WHITE">-->
+<!--                    <font>-->
+<!--                        <Font name="System Bold" size="15.0" />-->
+<!--                    </font>-->
+<!--                </JFXButton>-->
+<!--                <JFXTextField fx:id="qtePanier" labelFloat="true" layoutX="208.0" layoutY="246.0" prefHeight="25.0" prefWidth="308.0" promptText="Quantite" >-->
+<!--                    <validators>-->
+<!--                        <RequiredFieldValidator message="Champ Quanity Obligatoire">-->
+<!--                            &lt;!&ndash;                  <FontIcon iconLiteral="fas-exclamation-triangle"/>&ndash;&gt;-->
+<!--                        </RequiredFieldValidator>-->
+<!--                        <RegexValidator message="Veuillez Entrer Une Quantity Valid " regexPattern="^[1-9]\\d*$"/>-->
+<!--                    </validators>-->
+<!--                </JFXTextField>-->
+
+
+
+
+            </children>
+        </Pane>
+    </children>
+
+</AnchorPane>
